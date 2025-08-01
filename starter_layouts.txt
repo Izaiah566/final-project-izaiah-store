@@ -1,0 +1,138 @@
+1. Create Listing:
+
+import { useState } from "react";
+
+const CreateListing = () => {
+  const [formData, setFormData] = useState({
+    title: "",
+    description: "",
+    price: "",
+    category: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submitting listing:", formData);
+    // Submit to backend or show preview
+  };
+
+  return (
+    <div className="max-w-xl mx-auto p-6">
+      <h2 className="text-2xl font-bold mb-4">Create New Listing</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input type="text" name="title" placeholder="Title" className="input" value={formData.title} onChange={handleChange} required />
+        <textarea name="description" placeholder="Description" className="input" value={formData.description} onChange={handleChange} required />
+        <input type="number" name="price" placeholder="Price" className="input" value={formData.price} onChange={handleChange} required />
+        <select name="category" className="input" value={formData.category} onChange={handleChange} required>
+          <option value="">Select Category</option>
+          <option value="Home">Home</option>
+          <option value="Digital">Digital</option>
+          <option value="Services">Services</option>
+        </select>
+        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Post Listing</button>
+      </form>
+    </div>
+  );
+};
+
+export default CreateListing;
+
+
+
+2. User Dashboard:
+
+const UserDashboard = () => {
+  return (
+    <div className="p-6 max-w-5xl mx-auto">
+      <h1 className="text-2xl font-bold mb-6">Welcome back!</h1>
+      <div className="grid gap-6 md:grid-cols-2">
+        <div className="card">
+          <h2 className="font-semibold text-lg mb-2">Your Listings</h2>
+          <ul className="text-sm text-gray-600"> {/* Replace with real data */}
+            <li>Bike - $100</li>
+            <li>Logo Design - $50</li>
+          </ul>
+        </div>
+        <div className="card">
+          <h2 className="font-semibold text-lg mb-2">Messages</h2>
+          <p className="text-sm text-gray-500">No new messages.</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserDashboard;
+
+
+
+3. Community Feed
+
+import { useState } from "react";
+
+const CommunityFeed = () => {
+  const [posts, setPosts] = useState([
+    { id: 1, author: "Jane", content: "What's the best camera for beginners?" },
+    { id: 2, author: "Mike", content: "Selling my old 3D printer, DM me!" },
+  ]);
+
+  return (
+    <div className="max-w-3xl mx-auto p-6">
+      <h1 className="text-2xl font-bold mb-4">Community Feed</h1>
+      <div className="space-y-4">
+        {posts.map((post) => (
+          <div key={post.id} className="border rounded p-4 shadow-sm">
+            <p className="text-sm text-gray-500">@{post.author}</p>
+            <p className="text-lg">{post.content}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default CommunityFeed;
+
+
+
+4. Login / Register
+
+import { useState } from "react";
+
+const AuthPage = () => {
+  const [isLogin, setIsLogin] = useState(true);
+  const [formData, setFormData] = useState({ email: "", password: "" });
+
+  const handleToggle = () => setIsLogin(!isLogin);
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(isLogin ? "Logging in:" : "Registering:", formData);
+  };
+
+  return (
+    <div className="max-w-sm mx-auto p-6">
+      <h2 className="text-xl font-bold mb-4">{isLogin ? "Login" : "Register"}</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <input type="email" name="email" placeholder="Email" className="input" onChange={handleChange} required />
+        <input type="password" name="password" placeholder="Password" className="input" onChange={handleChange} required />
+        <button className="bg-blue-600 text-white w-full py-2 rounded hover:bg-blue-700">
+          {isLogin ? "Login" : "Sign Up"}
+        </button>
+      </form>
+      <p className="mt-4 text-center text-sm">
+        {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
+        <button className="text-blue-600 underline" onClick={handleToggle}>
+          {isLogin ? "Sign Up" : "Login"}
+        </button>
+      </p>
+    </div>
+  );
+};
+
+export default AuthPage;
