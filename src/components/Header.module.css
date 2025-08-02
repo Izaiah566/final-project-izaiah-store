@@ -1,0 +1,26 @@
+.header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin: 0 auto 1rem;
+    padding: 5px;
+    width: 100%;
+    max-width: 1024px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.leftUl {
+    gap: 30px;
+}
+
+.rightUl {
+    gap: 30px;
+}
