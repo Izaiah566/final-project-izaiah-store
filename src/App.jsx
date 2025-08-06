@@ -8,6 +8,7 @@ import Home from "./pages/Home"
 import MarketplaceListings from "./pages/MarketplaceListings"
 import UserDashboard from "./pages/UserDashboard"
 import MainLayout from "./layouts/MainLayout"
+import Registration from "./pages/Registration"
 import './index.css'
 
 
@@ -20,11 +21,12 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/MarketplaceListings" element={<MarketplaceListings />} />
           <Route path="/About" element={<About />} />
-          <Route path="AuthPage" element={<AuthPage />}/>
-          <Route path="CommunityFeed" element={< CommunityFeed />}/>
-          <Route path="Contact" element={<Contact />}/>
-          <Route path="UserDashboard" element={<UserDashboard />}/>
-          <Route path="CreateListing" element={<CreateListing />} />
+          <Route path="/AuthPage" element={<AuthPage />}/>
+          <Route path="/CommunityFeed" element={< CommunityFeed />}/>
+          <Route path="/Contact" element={<Contact />}/>
+          <Route path="/UserDashboard" element={<UserDashboard />}/>
+          <Route path="/CreateListing" element={<CreateListing />} />
+          <Route path="/Registration" element={<Registration />}/>
         </Route>
       </Routes>
     </>

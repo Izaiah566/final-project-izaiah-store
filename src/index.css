@@ -13,7 +13,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.home-div {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
 
+.about-div {
+  text-align: center;
+  padding: 100px;
+}
+
+.about-div h1 {
+  font-family: 'Courier New', Courier, monospace;
+  margin: auto;
+}
+
+.about-div p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.listing-search {
+  margin: 1px auto;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

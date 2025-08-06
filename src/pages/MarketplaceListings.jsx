@@ -16,20 +16,18 @@ const MarketplaceListings = () => {
   );
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Marketplace</h1>
+    <div>
+      <h1>Marketplace</h1>
 
-      <div className="flex flex-col sm:flex-row gap-4 mb-6">
+      <div className="listing-search">
         <input
           type="text"
           placeholder="Search listings..."
-          className="border px-4 py-2 rounded w-full"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
 
         <select
-          className="border px-4 py-2 rounded"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -40,14 +38,14 @@ const MarketplaceListings = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="listing-products">
         {filteredListings.map((item) => (
           <div key={item.id} className="border p-4 rounded shadow hover:shadow-lg transition">
-            <h2 className="text-xl font-semibold">{item.title}</h2>
-            <p className="text-gray-600">{item.description}</p>
-            <p className="text-blue-500 font-bold mt-2">{item.price}</p>
-            <p className="text-sm text-gray-500">Category: {item.category}</p>
-            <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+            <h2>{item.title}</h2>
+            <p>{item.description}</p>
+            <p>{item.price}</p>
+            <p>Category: {item.category}</p>
+            <button>
               View Details
             </button>
           </div>
