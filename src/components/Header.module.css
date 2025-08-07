@@ -20,8 +20,11 @@ ul {
 
 .leftUl {
     gap: 30px;
+    padding-right: 50px;
+    float: left;
 }
 
 .rightUl {
     gap: 30px;
+    float: right;
 }

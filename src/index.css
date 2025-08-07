@@ -13,9 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.home-div {
+#home-div {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
+}
+
+#home-featured {
+  text-align: center;
+}
+
+#home-categories {
+  text-align: center;
 }
 
 .about-div {

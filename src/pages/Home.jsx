@@ -5,9 +5,16 @@ const Home = () => {
     return (
         <>
             <Header />
-            <div className="home-div">
+            <div id="home-div">
                 <h1>Buy and Sell in Your Community</h1>
                 <p>Join our marketplace to connect with  buyers and sellers near you.</p>
+                <input type="text" placeholder="Search for items"/><button>Search</button>
+            </div>
+            <div id="home-featured">
+                <h1>Featured Listings</h1>
+            </div>
+            <div id="home-categories">
+                <h1>Explore Categories</h1>
             </div>
         </>
     )

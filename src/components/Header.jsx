@@ -13,11 +13,10 @@ const Header = () => {
                     <li><Link to="/AuthPage">Login</Link></li>
                     <li><Link to="/UserDashboard">User</Link></li>
                     <li><Link to="/CommunityFeed">Feedback</Link></li>
-                    <li><Link to="/CreateListing">Create</Link></li>
                 </ul>
                 <ul className={styles.rightUl}>
                     <li><Link to="/Registration">Join</Link></li>
-                    <li>Sell</li>
+                    <li><Link to="/CreateListing">Sell</Link></li>
                 </ul>
             </nav>
         </header>
