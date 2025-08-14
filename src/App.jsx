@@ -10,6 +10,7 @@ import UserDashboard from "./pages/UserDashboard"
 import MainLayout from "./layouts/MainLayout"
 import Registration from "./pages/Registration"
 import './index.css'
+import ListingDetail from "./pages/ListingDetail"
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/UserDashboard" element={<UserDashboard />}/>
           <Route path="/CreateListing" element={<CreateListing />} />
           <Route path="/Registration" element={<Registration />}/>
+          <Route path="/Listing" element={<ListingDetail />}/>
         </Route>
       </Routes>
     </>

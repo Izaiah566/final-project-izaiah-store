@@ -19,9 +19,9 @@ const CreateListing = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4">Create New Listing</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div>
+      <h2>Create New Listing</h2>
+      <form onSubmit={handleSubmit} className="create-listing">
         <input type="text" name="title" placeholder="Title" className="input" value={formData.title} onChange={handleChange} required />
         <textarea name="description" placeholder="Description" className="input" value={formData.description} onChange={handleChange} required />
         <input type="number" name="price" placeholder="Price" className="input" value={formData.price} onChange={handleChange} required />

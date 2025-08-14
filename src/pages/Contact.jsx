@@ -13,12 +13,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-      <p className="text-gray-600 mb-6">
+    <div id="contact-div">
+      <h2>Contact Us</h2>
+      <p>
         Have questions or need help? Fill out the form below.
       </p>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="contact-form">
         <input
           name="name"
           placeholder="Your Name"
@@ -47,7 +47,6 @@ const Contact = () => {
         />
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
           Send Message
         </button>

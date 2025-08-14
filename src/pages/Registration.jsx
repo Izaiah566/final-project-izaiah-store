@@ -28,7 +28,7 @@ const Registration = () => {
   };
 
   return (
-    <div>
+    <div className="reg-div">
       <h2>Create an Account</h2>
 
       {error && (
@@ -36,55 +36,57 @@ const Registration = () => {
           {error}
         </div>
       )}
+      <div className="reg-form">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="input"
+            required
+          />
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="input"
-          required
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            className="input"
+            required
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          value={formData.email}
-          onChange={handleChange}
-          className="input"
-          required
-        />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            className="input"
+            required
+          />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          className="input"
-          required
-        />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            className="input"
+            required
+          />
 
-        <input
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          className="input"
-          required
-        />
-
-        <button
-          type="submit"
-          
-        >
-          Register
-        </button>
-      </form>
+          <button
+            type="submit"
+            
+          >
+            Register
+          </button>
+        </form>
+      </div>
+      
 
       <p>
         Already have an account?{" "}

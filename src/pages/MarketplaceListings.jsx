@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MockListings } from "../components/MockListings";
 
 const listings = [
   { id: 1, title: "Handmade Mug", price: "$15", category: "Home", description: "A ceramic mug" },
@@ -10,16 +11,16 @@ const MarketplaceListings = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("");
 
-  const filteredListings = listings.filter((item) =>
+  const filteredListings = MockListings.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
     (category === "" || item.category === category)
   );
 
   return (
-    <div>
+    <div className="listing-page">
       <h1>Marketplace</h1>
 
-      <div className="listing-search">
+      <div className="filters">
         <input
           type="text"
           placeholder="Search listings..."
@@ -38,10 +39,11 @@ const MarketplaceListings = () => {
         </select>
       </div>
 
-      <div className="listing-products">
+      <div>
         {filteredListings.map((item) => (
-          <div key={item.id} className="border p-4 rounded shadow hover:shadow-lg transition">
+          <div key={item.id} className="listing-card">
             <h2>{item.title}</h2>
+            <img src={item.image} />
             <p>{item.description}</p>
             <p>{item.price}</p>
             <p>Category: {item.category}</p>

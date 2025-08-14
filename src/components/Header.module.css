@@ -8,6 +8,12 @@
     padding: 5px;
     width: 100%;
     max-width: 1024px;
+    background-color: black;
+}
+
+nav {
+    background-color: red;
+    display:contents;
 }
 
 ul {
