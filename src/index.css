@@ -122,7 +122,6 @@
 }
 
 .reg-form form {
-  width: 300px;
   background: gray;
   padding: 30px;
   border-radius: 8px;
@@ -133,6 +132,13 @@
 .reg-form form .input {
   margin-bottom: 15px;
   padding: 10px;
+}
+
+.create-listing-div
+{
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px
 }
 
 .create-listing {

@@ -19,7 +19,7 @@ const CreateListing = () => {
   };
 
   return (
-    <div>
+    <div className="create-listing-div">
       <h2>Create New Listing</h2>
       <form onSubmit={handleSubmit} className="create-listing">
         <input type="text" name="title" placeholder="Title" className="input" value={formData.title} onChange={handleChange} required />

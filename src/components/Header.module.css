@@ -33,4 +33,5 @@ ul {
 .rightUl {
     gap: 30px;
     float: right;
+    margin: auto;
 }
