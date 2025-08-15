@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-
+import { MockListings } from "../../public/MockListings";
 
 const Home = () => {
     return (
@@ -10,7 +10,7 @@ const Home = () => {
                 <p>Join our marketplace to connect with  buyers and sellers near you.</p>
                 <input type="text" placeholder="Search for items"/><button>Search</button>
             </div>
-            <div id="home-featured">
+            <div id="featured-listings">
                 <h1>Featured Listings</h1>
             </div>
             <div id="home-categories">

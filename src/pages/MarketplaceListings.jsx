@@ -1,11 +1,5 @@
 import { useState } from "react";
-import { MockListings } from "../components/MockListings";
-
-const listings = [
-  { id: 1, title: "Handmade Mug", price: "$15", category: "Home", description: "A ceramic mug" },
-  { id: 2, title: "Freelance Logo Design", price: "$50", category: "Design", description: "Custom logo work" },
-  { id: 3, title: "Used Bike", price: "$100", category: "Sports", description: "Mountain bike in good condition" },
-];
+import { MockListings } from "../../public/MockListings";
 
 const MarketplaceListings = () => {
   const [searchTerm, setSearchTerm] = useState("");
