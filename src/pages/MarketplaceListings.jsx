@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { MockListings } from "../../public/MockListings";
+import { useNavigate } from "react-router-dom";
 
 const MarketplaceListings = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("");
 
-  const filteredListings = MockListings.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
-    (category === "" || item.category === category)
+  const filteredListings = MockListings.filter((listing) =>
+    listing.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+    (category === "" || listing.category === category)
   );
+
+  const navigate = useNavigate();
 
   return (
     <div className="listing-page">
@@ -41,7 +44,7 @@ const MarketplaceListings = () => {
             <p>{item.description}</p>
             <p>{item.price}</p>
             <p>Category: {item.category}</p>
-            <button>
+            <button onClick={() => navigate(`/MarketplaceListings/${item.id}`)}>
               View Details
             </button>
           </div>

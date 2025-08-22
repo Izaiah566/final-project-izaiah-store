@@ -9,8 +9,8 @@ import MarketplaceListings from "./pages/MarketplaceListings"
 import UserDashboard from "./pages/UserDashboard"
 import MainLayout from "./layouts/MainLayout"
 import Registration from "./pages/Registration"
-import './index.css'
 import ListingDetail from "./pages/ListingDetail"
+import './index.css'
 
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />}/>
           <Route path="/MarketplaceListings" element={<MarketplaceListings />} />
+          <Route path="/MarketplaceListings/:id" element={<ListingDetail />}/>
           <Route path="/About" element={<About />} />
           <Route path="/AuthPage" element={<AuthPage />}/>
           <Route path="/CommunityFeed" element={< CommunityFeed />}/>
@@ -28,7 +29,6 @@ function App() {
           <Route path="/UserDashboard" element={<UserDashboard />}/>
           <Route path="/CreateListing" element={<CreateListing />} />
           <Route path="/Registration" element={<Registration />}/>
-          <Route path="/Listing" element={<ListingDetail />}/>
         </Route>
       </Routes>
     </>

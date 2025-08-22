@@ -13,12 +13,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Home page */
 #home-div {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
 }
 
-#home-featured {
+#featured-listings {
   text-align: center;
 }
 
@@ -26,6 +27,7 @@
   text-align: center;
 }
 
+/* About page */
 .about-div {
   text-align: center;
   padding: 100px;
@@ -40,6 +42,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Listing page */
 .listing-page {
   grid-template-columns: 250px 1fr;
   gap: 20px;
@@ -74,7 +77,36 @@
   object-fit: cover;
 }
 
+/* Details page */
+.details-page {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  padding: 40px;
+}
 
+.details-image{
+  width: 100%;
+  border-radius: 8px;
+}
+
+.details-info h1 {
+  margin-bottom: 15px;
+}
+
+.buy-button {
+  display: inline-block;
+  background: #2d9cdb;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Contact page */
 #contact-div{
   max-width: 700px;
   margin: auto;
@@ -91,6 +123,7 @@
   margin-bottom: 15px;
 }
 
+/* Login page */
 .login-div {
   max-width: 700px;
   margin: auto;
@@ -122,6 +155,7 @@
   padding: 10px;
 }
 
+/* Registration page*/
 .reg-div {
   max-width: 700px;
   margin: auto;
@@ -145,6 +179,7 @@
   padding: 10px;
 }
 
+/* Create listing Page*/
 .create-listing-div
 {
   max-width: 700px;
@@ -170,6 +205,7 @@
   border-radius: 6px;
 }
 
+/* Community Page */
 .feed {
   max-width: 800px;
   margin: auto;
@@ -202,8 +238,6 @@
   border-radius: 8px;
   padding: 20px;
 }
-
-
 
 @media (prefers-color-scheme: light) {
   :root {
