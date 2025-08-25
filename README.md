@@ -30,3 +30,19 @@ User Dashboard
 Community Feed
 
 Login/Register
+
+Homepage
+
+Contact Page
+
+Feedback page
+
+Registration Page
+
+Selling Page
+
+The only working feature is the details page, due to time constraint, the login, registration, and selling functions.
+
+This website uses Supabase database to use data on the website. The website is currently underdevelopment but will be added more for the future.
+
+

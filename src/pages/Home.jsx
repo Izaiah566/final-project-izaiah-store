@@ -4,7 +4,6 @@ import { MockListings } from "../../public/MockListings";
 const Home = () => {
     return (
         <>
-            <Header />
             <div id="home-div">
                 <h1>Buy and Sell in Your Community</h1>
                 <p>Join our marketplace to connect with  buyers and sellers near you.</p>

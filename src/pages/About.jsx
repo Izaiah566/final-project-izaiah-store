@@ -3,7 +3,6 @@ import Header from "../components/Header";
 const About = () => {
   return (
     <>
-      <Header />
       <div className="about-div">
         <h1 className="about-h1">About Our Marketplace</h1>
         <p className="text-gray-700 mb-4">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "../../supabaseClient";
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -14,8 +15,14 @@ const Registration = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const {data, error } = await supabase.auth.signUp({
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      confirmPassword: formData.confirmPassword,
+    });
 
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match.");
