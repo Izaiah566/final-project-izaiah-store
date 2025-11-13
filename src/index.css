@@ -78,32 +78,71 @@
 }
 
 /* Details page */
-.details-page {
-  display: grid;
-  grid-template-columns: 1fr 400px;
-  gap: 40px;
-  padding: 40px;
+.listing-detail-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.details-image{
+.listing-detail-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.listing-image {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  object-fit: cover;
 }
 
-.details-info h1 {
-  margin-bottom: 15px;
+.listing-info {
+  padding: 1.5rem;
+}
+
+.listing-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.listing-category {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.listing-description {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.listing-price {
+  font-size: 1.5rem;
+  color: #0a7cff;
+  margin-bottom: 1rem;
+}
+
+.listing-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
 }
 
 .buy-button {
-  display: inline-block;
-  background: #2d9cdb;
-  padding: 12px 24px;
-  border-radius: 6px;
+  background-color: #0a7cff;
   color: white;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
 }
+
+.contact-button {
+  background-color: #eee;
+  color: #333;
+}
+
 
 
 /* Contact page */
