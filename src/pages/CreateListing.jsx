@@ -5,6 +5,7 @@ const CreateListing = () => {
     title: "",
     description: "",
     price: "",
+    image_url: "",
     category: "",
   });
 

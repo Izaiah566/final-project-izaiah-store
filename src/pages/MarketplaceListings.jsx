@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MockListings } from "../../public/MockListings";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../../supabaseClient";
 
 const MarketplaceListings = () => {
   const [searchTerm, setSearchTerm] = useState("");
