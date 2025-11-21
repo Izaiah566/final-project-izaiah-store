@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-// import { supabase } from "../../supabaseClient"; // uncomment if using Supabase
+import { supabase } from "../../supabaseClient"; // uncomment if using Supabase
 import { MockListings } from "../../public/MockListings";
+import styles from "../modules/listings.module.css";
 
-const ListingDetail = () => {
+const Listings = () => {
   const { id } = useParams();
   const [listing, setListing] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -14,7 +15,7 @@ const ListingDetail = () => {
     const fetchListing = async () => {
       try {
         setLoading(true);
-
+        
         // 🧩 Option 1: From mock data
         const foundListing = MockListings.find(
           (item) => String(item.id) === id
@@ -55,29 +56,29 @@ const ListingDetail = () => {
 
   // ✅ Display listing details
   return (
-    <div className="listing-detail-container">
-      <div className="listing-detail-card">
+    <div className={styles.detailContainer}>
+      <div className={styles.detailCard}>
         <img
           src={listing.image || "https://via.placeholder.com/600x400"}
           alt={listing.title}
-          className="listing-image"
+          className={styles.detailImage}
         />
 
-        <div className="listing-info">
-          <h1 className="listing-title">{listing.title}</h1>
-          <p className="listing-category">{listing.category}</p>
-          <p className="listing-description">{listing.description}</p>
-          <p className="listing-price">${listing.price}</p>
+        <div className={styles.detailInfo}>
+          <h1 className={styles.detailTitle}>{listing.title}</h1>
+          <p className={styles.detailCategory}>{listing.category}</p>
+          <p className={styles.detailDescription}>{listing.description}</p>
+          <p className={styles.detailPrice}>${listing.price}</p>
 
-          <div className="listing-actions">
+          <div className={styles.detailActions}>
             <button
-              className="buy-button"
+              className={styles.buyButton}
               onClick={() => alert(`Buying ${listing.title}...`)}
             >
               🛒 Buy Now
             </button>
             <button
-              className="contact-button"
+              className={styles.contactButton}
               onClick={() => alert(`Message seller about ${listing.title}`)}
             >
               💬 Contact Seller
@@ -89,5 +90,5 @@ const ListingDetail = () => {
   );
 };
 
-export default ListingDetail;
+export default Listings;
 

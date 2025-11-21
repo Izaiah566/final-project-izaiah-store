@@ -1,0 +1,14 @@
+/* About page */
+.aboutDiv {
+  text-align: center;
+  padding: 100px;
+}
+
+.aboutDiv h1 {
+  font-family: 'Courier New', Courier, monospace;
+  margin: auto;
+}
+
+.aboutDiv p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

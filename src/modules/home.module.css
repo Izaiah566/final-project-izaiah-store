@@ -1,0 +1,66 @@
+/* Home page */
+.homeContainer {
+  font-family: Arial, sans-serif;
+  padding: 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.heroButtons {
+  margin-top: 1rem;
+}
+
+.btnPrimary {
+  padding: 0.5rem 1rem;
+  background: #4cafef;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.btnSecondary {
+  padding: 0.5rem 1rem;
+  background: #c1b9b9;
+  border: none;
+  cursor: pointer;
+}
+
+.featured {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.listingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: auto;
+}
+
+.listingCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.listingCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.community {
+  text-align: center;
+}
+
+.community ul {
+  list-style-type: none;
+}

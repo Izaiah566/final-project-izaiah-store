@@ -1,37 +1,152 @@
-.header {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: space-between;
-    margin: 0 auto 1rem;
-    padding: 5px;
+/* Container */
+.headerContainer {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0a7cff;
+  text-decoration: none;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #0a7cff;
+}
+
+/* Active Page Highlight */
+.active {
+  font-weight: 600;
+  color: #0a7cff;
+}
+
+/* Auth Buttons */
+.authButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.loginBtn,
+.registerBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.loginBtn {
+  background: transparent;
+  border: 1px solid #0a7cff;
+  color: #0a7cff;
+}
+
+.loginBtn:hover {
+  background-color: #e8f2ff;
+}
+
+.registerBtn {
+  background-color: #0a7cff;
+  color: white;
+}
+
+.registerBtn:hover {
+  background-color: #006fe0;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ====================
+   Responsive Styling
+==================== */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .authButtons {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    color: #333;
+  }
+
+  /* Mobile menu dropdown */
+  .mobileMenu {
+    position: absolute;
+    top: 70px;
+    left: 0;
     width: 100%;
-    max-width: 1024px;
-    background-color: black;
-}
-
-nav {
-    background-color: red;
-    display:contents;
-}
-
-ul {
-    list-style-type: none;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1.5rem 1rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .mobileMenu a {
+    font-size: 1.1rem;
+    color: #333;
     text-decoration: none;
+  }
+
+  .mobileMenu a:hover {
+    color: #0a7cff;
+  }
+
+  .mobileAuth {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 }
 
 
-.leftUl {
+/*
+.leftLinks a {
     gap: 30px;
     padding-right: 50px;
     float: left;
 }
 
-.rightUl {
+.rightLinks a {
     gap: 30px;
     float: right;
     margin: auto;
 }
+*/

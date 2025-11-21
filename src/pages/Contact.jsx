@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../modules/contact.module.css"
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -13,12 +14,12 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact-div">
+    <div className={styles.contactDiv}>
       <h2>Contact Us</h2>
       <p>
         Have questions or need help? Fill out the form below.
       </p>
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={handleSubmit} className={styles.contactForm}>
         <input
           name="name"
           placeholder="Your Name"

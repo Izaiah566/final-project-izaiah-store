@@ -1,8 +1,10 @@
-const UserDashboard = () => {
+import styles from "../modules/dashboard.module.css"
+
+const Dashboard = () => {
   return (
-    <div className="dashboard">
+    <div className={styles.dashboard}>
       <h1>Welcome back!</h1>
-      <div className="dashboard-content">
+      <div className={styles.dashboardContent}>
         <div className="card">
           <h2>Your Listings</h2>
           <ul> {/* Replace with real data */}
@@ -19,4 +21,4 @@ const UserDashboard = () => {
   );
 };
 
-export default UserDashboard;
+export default Dashboard;

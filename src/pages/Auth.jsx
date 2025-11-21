@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
+import styles from "../modules/auth.module.css";
 
-const AuthPage = () => {
+const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
@@ -22,7 +23,7 @@ const AuthPage = () => {
       if (isLogin) {
         // LOGIN
         const { data, error } = await supabase.auth.signInWithPassword({
-          email: formData.email,
+          email: formData.email.trim(),
           password: formData.password,
         });
         if (error) throw error;
@@ -44,15 +45,15 @@ const AuthPage = () => {
   };
 
   return (
-    <div className="login-div">
+    <div className={styles.loginDiv}>
       <h2>{isLogin ? "Login" : "Register"}</h2>
-      <div className="auth-form">
+      <div className={styles.authForm}>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
             placeholder="Email"
-            className="input"
+            className={styles.input}
             value={formData.email}
             onChange={handleChange}
             required
@@ -61,12 +62,12 @@ const AuthPage = () => {
             type="password"
             name="password"
             placeholder="Password"
-            className="input"
+            className={styles.input}
             value={formData.password}
             onChange={handleChange}
             required
           />
-          <button type="submit" className="input">
+          <button type="submit" className={styles.input}>
             {isLogin ? "Login" : "Sign Up"}
           </button>
         </form>
@@ -76,7 +77,7 @@ const AuthPage = () => {
 
       <p>
         {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-        <button onClick={handleToggle} className="input">
+        <button onClick={handleToggle} className={styles.input}>
           {isLogin ? "Sign Up" : "Login"}
         </button>
       </p>
@@ -84,4 +85,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Auth;

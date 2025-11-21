@@ -1,0 +1,32 @@
+/* Login page */
+.loginDiv {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.loginDiv p {
+  text-align: center;
+}
+
+.authForm {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authForm form {
+  width: 300px;
+  background: gray;
+  padding: 30px;
+  border-radius: 8px;
+  margin: auto;
+  display: grid;
+}
+
+.authForm form .input {
+  margin-bottom: 15px;
+  padding: 10px;
+}

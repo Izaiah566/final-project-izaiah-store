@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CommunityFeed = () => {
+const Community = () => {
   const [posts, setPosts] = useState([
     { id: 1, author: "Jane", content: "What's the best camera for beginners?" },
     { id: 2, author: "Mike", content: "Selling my old 3D printer, DM me!" },
@@ -21,4 +21,4 @@ const CommunityFeed = () => {
   );
 };
 
-export default CommunityFeed;
+export default Community;

@@ -1,0 +1,16 @@
+/* Contact page */
+.contactDiv{
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px
+}
+
+.contactForm {
+  margin: 45px auto;
+  padding: 45px;
+  max-width: 200px;
+}
+
+.contactForm .input {
+  margin-bottom: 15px;
+}

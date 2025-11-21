@@ -1,10 +1,10 @@
-import Header from "../components/Header";
+import styles from "../modules/about.module.css"
 
 const About = () => {
   return (
     <>
-      <div className="about-div">
-        <h1 className="about-h1">About Our Marketplace</h1>
+      <div className={styles.aboutDiv}>
+        <h1>About Our Marketplace</h1>
         <p className="text-gray-700 mb-4">
           We’re building a community-first marketplace where people can buy, sell,
           and connect with others in their area or niche. Whether you're a local

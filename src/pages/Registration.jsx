@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
+import styles from "../modules/registration.module.css"
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="reg-div">
+    <div className={styles.regDiv}>
       <h2>Create an Account</h2>
 
       {error && (
@@ -43,7 +44,7 @@ const Registration = () => {
           {error}
         </div>
       )}
-      <div className="reg-form">
+      <div className={styles.regForm}>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -51,7 +52,7 @@ const Registration = () => {
             placeholder="Full Name"
             value={formData.name}
             onChange={handleChange}
-            className="input"
+            className={styles.input}
             required
           />
 
@@ -61,7 +62,7 @@ const Registration = () => {
             placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
-            className="input"
+            className={styles.input}
             required
           />
 
@@ -71,7 +72,7 @@ const Registration = () => {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            className="input"
+            className={styles.input}
             required
           />
 
@@ -81,7 +82,7 @@ const Registration = () => {
             placeholder="Confirm Password"
             value={formData.confirmPassword}
             onChange={handleChange}
-            className="input"
+            className={styles.input}
             required
           />
 
@@ -97,7 +98,7 @@ const Registration = () => {
 
       <p>
         Already have an account?{" "}
-        <a href="/AuthPage">
+        <a href="/Auth">
           Login here
         </a>
       </p>

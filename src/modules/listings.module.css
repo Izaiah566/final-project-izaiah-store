@@ -1,0 +1,65 @@
+/* Details page */
+.detailContainer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.detailCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.detailImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.detailInfo {
+  padding: 1.5rem;
+}
+
+.detailTitle {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.detailCategory {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.detailDescription {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.detailPrice {
+  font-size: 1.5rem;
+  color: #0a7cff;
+  margin-bottom: 1rem;
+}
+
+.detailActions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.buyButton {
+  background-color: #0a7cff;
+  color: white;
+}
+
+.contactButton {
+  background-color: #eee;
+  color: #333;
+}

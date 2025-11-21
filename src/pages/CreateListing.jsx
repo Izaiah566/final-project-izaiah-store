@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../modules/createListing.module.css";
 
 const CreateListing = () => {
   const [formData, setFormData] = useState({
@@ -20,9 +21,9 @@ const CreateListing = () => {
   };
 
   return (
-    <div className="create-listing-div">
+    <div className={styles.createListingDiv}>
       <h2>Create New Listing</h2>
-      <form onSubmit={handleSubmit} className="create-listing">
+      <form onSubmit={handleSubmit} className={styles.createListing}>
         <input type="text" name="title" placeholder="Title" className="input" value={formData.title} onChange={handleChange} required />
         <textarea name="description" placeholder="Description" className="input" value={formData.description} onChange={handleChange} required />
         <input type="number" name="price" placeholder="Price" className="input" value={formData.price} onChange={handleChange} required />
