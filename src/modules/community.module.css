@@ -1,14 +1,77 @@
 /* Community Page */
-.feed {
-  max-width: 800px;
+.communityPage {
+  max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 2rem;
 }
 
-.post {
-  background: gray;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+.communityHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createPostBtn {
+  background-color: #0a7cff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.createPostBtn:hover {
+  background-color: #006fe0;
+}
+
+.communityFilters {
+  margin: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.communityFilters input,
+.communityFilters select {
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.postGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.postCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.postCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+.postCategory {
+  color: #0a7cff;
+  font-weight: bold;
+  margin: 0.4rem 0;
+}
+
+.postBody {
+  color: #444;
+  margin: 0.5rem 0 1rem;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #777;
 }

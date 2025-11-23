@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MockListings } from "../../public/MockListings";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "../../supabaseClient";
+//import { supabase } from "../../supabaseClient";
 import styles from "../modules/marketplace.module.css";
 
 const Marketplace = () => {
@@ -93,7 +93,7 @@ const Marketplace = () => {
       {/* Listings Grid */}
       <div className={styles.listingGrid}>
         {filtered.map((item) => (
-          <div key={item.id} className={styles.listingGrid}>
+          <div key={item.id} className={styles.listingCard}>
             <img
               src={item.image}
               alt={item.title}

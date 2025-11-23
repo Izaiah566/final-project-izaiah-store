@@ -107,7 +107,6 @@
   /* Mobile menu dropdown */
   .mobileMenu {
     position: absolute;
-    top: 70px;
     left: 0;
     width: 100%;
     background: white;

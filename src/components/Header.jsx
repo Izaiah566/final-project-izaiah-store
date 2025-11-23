@@ -123,6 +123,9 @@ const Header = () => {
           <Link to="/" onClick={() => setOpenMenu(false)}>
             Home
           </Link>
+          <Link to="/About" onClick={() => setOpenMenu(false)}>
+            About
+          </Link>
           <Link to="/Marketplace" onClick={() => setOpenMenu(false)}>
             Marketplace
           </Link>
