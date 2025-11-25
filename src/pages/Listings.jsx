@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { supabase } from "../../supabaseClient"; // uncomment if using Supabase
-import { MockListings } from "../../public/MockListings";
+//import { supabase } from "../../supabaseClient"; // uncomment if using Supabase
+import { MockListings } from "../data/MockListings";
 import styles from "../modules/listings.module.css";
 
 const Listings = () => {

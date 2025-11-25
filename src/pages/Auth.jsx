@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
+import { useNavigate } from "react-router-dom";
 import styles from "../modules/auth.module.css";
 
 const Auth = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
+
+  const navigate = useNavigate();
 
   const handleToggle = () => {
     setIsLogin(!isLogin);
@@ -23,7 +26,7 @@ const Auth = () => {
       if (isLogin) {
         // LOGIN
         const { data, error } = await supabase.auth.signInWithPassword({
-          email: formData.email.trim(),
+          email: formData.email,
           password: formData.password,
         });
         if (error) throw error;
@@ -34,6 +37,9 @@ const Auth = () => {
         const { data, error } = await supabase.auth.signUp({
           email: formData.email,
           password: formData.password,
+          options: {
+            emailRedirectTo: undefined,
+          }
         });
         if (error) throw error;
         setMessage("✅ Check your email for confirmation!");
@@ -67,7 +73,10 @@ const Auth = () => {
             onChange={handleChange}
             required
           />
-          <button type="submit" className={styles.input}>
+          <button type="submit" 
+          className={styles.input}
+          onClick={() => navigate(`/`)}
+          >
             {isLogin ? "Login" : "Sign Up"}
           </button>
         </form>

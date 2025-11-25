@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { MockListings } from "../../public/MockListings";
+import { MockListings } from "../data/MockListings";
 import { useNavigate } from "react-router-dom";
 //import { supabase } from "../../supabaseClient";
 import styles from "../modules/marketplace.module.css";
@@ -20,11 +20,10 @@ const Marketplace = () => {
 
       try {
         // OPTION A: Supabase API (when ready)
-        /*
-        const { data, error } = await supabase.from("listings").select("*");
-        if (error) throw error;
-        setListings(data);
-        */
+        //const { data, error } = await supabase.from("listings").select("*");
+        //if (error) throw error;
+        //setListings(data);
+        
 
         // OPTION B: Mock Data (current)
         setListings(MockListings);
