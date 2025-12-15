@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { supabase } from "../../supabaseClient";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {

@@ -10,7 +10,7 @@ import Dashboard from "./pages/Dashboard"
 import MainLayout from "./layouts/MainLayout"
 import Registration from "./pages/Registration"
 import Listings from "./pages/Listings"
-import './index.css'
+import "./index.css"
 
 
 function App() {
